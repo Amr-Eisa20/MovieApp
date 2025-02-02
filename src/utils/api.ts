@@ -69,7 +69,7 @@ export async function fetchMovieCredits(id: number): Promise<Credit[]> {
     `${API_BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`
   );
   const data = await response.json();
-  return data.cast.slice(0, 10); // Return only the first 10 cast members
+  return data?.cast?.slice(0, 10);
 }
 
 export async function fetchGenres(): Promise<{ [id: number]: string }> {

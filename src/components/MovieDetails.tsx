@@ -64,7 +64,8 @@ export default function MovieDetails({ movie, credits }: MovieDetailsProps) {
                   R
                 </span>
                 {movie.release_date} •{" "}
-                {movie.genres.map((g) => g.name).join(", ")} • {movie.runtime}m
+                {movie?.genres?.map((g) => g.name).join(", ")} • {movie.runtime}
+                m
               </p>
 
               {/* User Score & Actions */}

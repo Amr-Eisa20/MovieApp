@@ -32,18 +32,18 @@ export default function TopBilledCast({ credits, movie }: TopBilledCastProps) {
 
   useEffect(() => {
     setClientData({
-      budget: `$${movie.budget.toLocaleString()}`,
-      revenue: `$${movie.revenue.toLocaleString()}`,
+      budget: `$${movie?.budget?.toLocaleString()}`,
+      revenue: `$${movie?.revenue?.toLocaleString()}`,
     });
   }, [movie.budget, movie.revenue]);
 
   const transformedCredits = useMemo(() => {
-    return credits.map((credit) => ({
+    return credits?.map((credit) => ({
       id: credit.id,
       name: credit.name,
       character: credit.character,
       image: credit.profile_path
-        ? `https://image.tmdb.org/t/p/w200${credit.profile_path}`
+        ? `https://image.tmdb.org/t/p/w200${credit?.profile_path}`
         : "/placeholder.png",
     }));
   }, [credits]);
@@ -74,7 +74,7 @@ export default function TopBilledCast({ credits, movie }: TopBilledCastProps) {
           <div>
             <p className="text-gray-500 text-sm">Original Language</p>
             <p className="text-black font-medium">
-              {movie.original_language.toUpperCase()}
+              {movie?.original_language?.toUpperCase()}
             </p>
           </div>
           {clientData ? (

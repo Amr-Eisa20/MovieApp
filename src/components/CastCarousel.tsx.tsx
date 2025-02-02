@@ -30,7 +30,7 @@ export default function CastCarousel({ credits }: CastCarouselProps) {
           1024: { slidesPerView: 5 },
         }}
       >
-        {credits.slice(0, 10).map((credit) => (
+        {credits?.slice(0, 10).map((credit) => (
           <SwiperSlide key={credit.id}>
             <div className="w-36 sm:w-44 text-center bg-white rounded-lg shadow-md border border-gray-200 p-3">
               <img
