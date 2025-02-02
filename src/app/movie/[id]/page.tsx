@@ -2,12 +2,15 @@ import { Suspense } from "react";
 import { fetchMovieDetails, fetchMovieCredits } from "../../../utils/api";
 import MovieDetails from "../../components/MovieDetails";
 
-export default async function MoviePage({
-  params,
-}: {
+type Props = {
   params: { id: string };
-}) {
-  const movieId = Number.parseInt(params?.id);
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function MoviePage({ params }: Props) {
+  const { id } = await params;
+  const movieId = Number.parseInt(id);
+
   const movieDetails = await fetchMovieDetails(movieId);
   const movieCredits = await fetchMovieCredits(movieId);
 
