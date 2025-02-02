@@ -9,13 +9,54 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffff;
     --foreground: #ededed;
   }
+}
+
+.black-and-white {
+  filter: grayscale(100%);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-slide {
+  margin-right: 25px !important;
+}
+.cast-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.cast-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  opacity: 1;
+}
+
+.cast-swiper .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+.cast-swiper .swiper-scrollbar {
+  bottom: 0;
+  height: 4px;
+  background-color: #e0e0e0;
+}
+
+.cast-swiper .swiper-scrollbar-drag {
+  background-color: #888;
+}
+
+.cast-swiper .swiper-wrapper {
+  padding-bottom: 16px; /* Add space for the scrollbar */
+}
+
+/* Remove any shadow from cards */
+.cast-swiper .swiper-slide {
+  height: auto;
 }
