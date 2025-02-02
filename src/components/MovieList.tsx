@@ -6,7 +6,7 @@ import {
   type Movie,
   type MovieList as MovieListType,
   type PaginatedResponse,
-} from "../../utils/api";
+} from "../utils/api";
 import MovieItem from "./MovieItem";
 import Pagination from "./Pagination";
 import FilterSidebar from "./FilterSidebar";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { Credit } from "../../utils/api";
+import type { Credit } from "../utils/api";
 import { ChevronRight, Facebook, Twitter, Instagram, Link } from "lucide-react";
 import CastCarousel from "./CastCarousel.tsx";
 

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { fetchMovieDetails, fetchMovieCredits } from "../../../utils/api";
-import MovieDetails from "../../components/MovieDetails";
+import MovieDetails from "../../../components/MovieDetails";
 
 type Props = {
   params: { id: string };

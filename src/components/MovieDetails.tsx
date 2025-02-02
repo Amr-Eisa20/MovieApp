@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import type { MovieDetails as MovieDetailsType, Credit } from "../../utils/api";
+import type { MovieDetails as MovieDetailsType, Credit } from "../utils/api";
 import { Play, Heart, Bookmark, Menu, Star, ChevronDown } from "lucide-react";
 import TopBilledCast from "./TopBilledCast";
 
